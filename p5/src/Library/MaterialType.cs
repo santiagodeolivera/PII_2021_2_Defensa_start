@@ -8,5 +8,15 @@
         {
             this.Name = name;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+            
+            return this.Name.Equals(((MaterialType)obj).Name);
+        }
     }
 }
