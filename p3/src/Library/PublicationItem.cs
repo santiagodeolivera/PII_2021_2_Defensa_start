@@ -8,6 +8,15 @@ namespace Ucu.Poo.Defense
 
         public int Price { get; set; }
 
+        // Añadido por el principio Expert
+        public int Total
+        {
+            get
+            {
+                return this.Quantity * this.Price;
+            }
+        }
+
         public PublicationItem(Material material, int quantity, int price)
         {
             this.Material = material;
