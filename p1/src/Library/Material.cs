@@ -6,6 +6,22 @@ namespace Ucu.Poo.Defense
 
         public MaterialType Type { get; set; }
 
+        public string TypeName
+        {
+            get
+            {
+                return this.Type.Name;
+            }
+        }
+
+        public bool IsDangerous
+        {
+            get
+            {
+                return this.Type.IsDangerous;
+            }
+        }
+
         public Material(string name, MaterialType type)
         {
             this.Name = name;
