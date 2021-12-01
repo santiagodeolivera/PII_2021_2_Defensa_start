@@ -1,3 +1,6 @@
+using System;
+using System.Text;
+
 namespace Ucu.Poo.Defense
 {
     public class PublicationItem
@@ -13,6 +16,20 @@ namespace Ucu.Poo.Defense
             this.Material = material;
             this.Quantity = quantity;
             this.Price = price;
+        }
+
+        // Añadido por el patrón "Don't talk to strangers".
+        public string AsText()
+        {
+            StringBuilder builder = new StringBuilder();
+
+            builder.Append(this.Quantity);
+            builder.Append(" de ");
+            builder.Append(this.Material.Name);
+            builder.Append(" a $");
+            builder.Append(this.Price);
+
+            return builder.ToString();
         }
     }
 }
